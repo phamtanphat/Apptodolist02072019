@@ -30,12 +30,17 @@ public class Retrofitinit {
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                                         .readTimeout(10, TimeUnit.SECONDS)
+                                        .writeTimeout(10,TimeUnit.SECONDS)
+                                        .connectTimeout(10,TimeUnit.SECONDS)
+                                        .build();
 
         retrofit = new Retrofit.Builder()
                         .addConverterFactory(GsonConverterFactory.create(gson))
                         .baseUrl("http://172.16.1.17:8080/apitodolist/")
+                        .client(okHttpClient)
                         .build();
 
+        return retrofit;
     }
 
 }
