@@ -3,6 +3,9 @@ package phamtanphat.ptp.khoaphamtraining.apptodolist02072019.api.retrofit;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -25,9 +28,13 @@ public class Retrofitinit {
 
         Gson gson = new GsonBuilder().setLenient().create();
 
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                                        .readTimeout(10, TimeUnit.SECONDS)
+
         retrofit = new Retrofit.Builder()
                         .addConverterFactory(GsonConverterFactory.create(gson))
-                        .baseUrl("http://localhost:8080/apitodolist/")
+                        .baseUrl("http://172.16.1.17:8080/apitodolist/")
+                        .build();
 
     }
 
