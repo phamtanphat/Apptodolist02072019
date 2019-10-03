@@ -37,4 +37,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_centerHorizontal="true"
+            android:text="Đăng nhập"
+            android:id="@+id/buttonDangnhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_centerHorizontal="true"
+            android:text="Đăng ký"
+            android:layout_below="@id/buttonDangnhap"
+            android:id="@+id/buttonDangky"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
 </LinearLayout>
