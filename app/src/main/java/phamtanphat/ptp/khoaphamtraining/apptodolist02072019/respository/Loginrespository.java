@@ -17,6 +17,7 @@ public class Loginrespository {
     private Responseapi responseapi;
 
     private Loginrespository() {
+        // Khoi tao retrofit va interface request
         responseapi = Retrofitinit.getApi();
     }
 

@@ -29,8 +29,10 @@ public class LoginActivity extends AppCompatActivity {
                     }else{
                         Log.d("BBB","Dang nhap that bai");
                     }
-
                 }
+//                - 7 / 10 /2019 : Nop project nay
+//                - gui project qua repository1
+//                - database va api qua repository2
             }
         });
     }
